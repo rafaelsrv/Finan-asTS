@@ -8,3 +8,25 @@ export const Container = styled.div`
     margin-top: 20px;
 
 `
+export const Inputs = styled.div`
+    text-align: center;
+    display: flex;
+    
+    `
+export const Data = styled.div`
+    flex: 1;
+`
+export const Titulo = styled.div`
+    flex: 1;   
+`
+export const Valor = styled.div`
+    flex: 1;          
+`
+
+export const Select = styled.div`
+    flex:1;    
+`
+export const Button = styled.div`
+    flex: 1;
+    padding-top : 55px;
+`
