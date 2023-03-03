@@ -22,39 +22,31 @@ const [InputDate, setInputDate] = useState('')
     
     const handleAddEvent = () =>{
         let newItem: Item = {
-            date: new Date(2023, 2, 1),
+            date: new Date(InputDate),
             category: InputCategorie,
             title: InputTitle,
             value: InputValue
             
         };
+        console.log(InputDate)
         
         onAdd(newItem)
-        console.log(InputCategorie)
+        
     }
         
         
-        
-    
-       
-        
-
-       
-      
-    
-
-    
 
     return(
         <C.Container>
             <C.Inputs>
-                <C.Data><p>Data</p><input type='date' placeholder='Digite a data'  ></input></C.Data>
+                <C.Data><p>Data</p><input type='date' onChange={e => setInputDate(e.target.value)} ></input></C.Data>
                 <C.Titulo><p>Título</p><input type='text' placeholder='Digite o Título'  onChange={e => setInputTitle(e.target.value)}></input></C.Titulo>
                 <C.Valor><p>Valor</p><input type='number' placeholder='Digite o valor'  onChange={e => setInputValue(parseInt(e.target.value))}></input></C.Valor>
                 
                 
                 <C.Select><p>Categoria</p>
-                <select id ="selectid" onChange={e => setInputCategorie(e.target.value)} >
+                <select onChange={e => setInputCategorie(e.target.value)} >
+                    <option>Selecione</option>
                     <option value="food">Alimentação</option>
                     <option value="rent">Aluguel</option>
                     <option value="salary">Salário</option>
