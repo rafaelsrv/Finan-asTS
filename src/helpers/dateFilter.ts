@@ -19,7 +19,7 @@ export const FilterListByMonth = (list: Item[], date: string): Item[] => {
         }
     }
 
-    return newList
+    return newList //Retorna lista incrementada com um novo elemento.
 
 }
 
